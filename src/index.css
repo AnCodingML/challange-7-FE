@@ -1,68 +1,122 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  font-weight: 300;
+  /* color-scheme: light dark; */
+  /* color: rgba(255, 255, 255, 0.87); */
+  /* background-color: #242424; */
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* font-synthesis: none; */
+  /* text-rendering: optimizeLegibility; */
+  /* -webkit-font-smoothing: antialiased; */
+  /* -moz-osx-font-smoothing: grayscale; */
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  font-family: Helvetica, Arial, sans-serif!important;
 }
-
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  size: 36px;
+  line-height: 54px;
+  font-weight: 700;
+}
+p {
+  font-size: 14px;
+  line-height: 20px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+.logo {
+  width: 100px;
+  height: 34px;
+  background-color: #0D28A6;
 }
-button:hover {
-  border-color: #646cff;
+nav {
+  z-index: 999;
+  background-color: #F1F3FF;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.navbar__menu {
+  font-weight: 400;
+  color: black;
+  transition: all 0.3s ease-in-out;
+  padding: 0.5rem;
+}
+.navbar__menu:hover {
+  color: grey;
+  transition: all 0.3s ease-in-out;
+}
+.btn-success {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #5CB85F;
+  --bs-btn-border-color: #5CB85F;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #7ddf80;
+  --bs-btn-hover-border-color: #7ddf80;
+  --bs-btn-focus-shadow-rgb: 60, 153, 110;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #146c43;
+  --bs-btn-active-border-color: #13653f;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #5CB85F;
+  --bs-btn-disabled-border-color: #5CB85F;
+}
+#hero__home{
+  top: 0;
+  padding: 0;
+  background-color: #F1F3FF;
+}
+.hero__content {
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, 25%);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.car-image {
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  padding-top: 80px;
+  z-index: 1;
+  bottom: 0;
+  height: 100%;
+  padding-left: 50px;
+}
+
+.car-background {
+  height: 270px;
+  background-color: #0D28A6;
+  width: 705px;
+  position: absolute;
+  z-index: 0;
+  border-radius: 80px 0 0 0;
+  right: 0;
+  transform: translateY(-100%);
+}
+
+.car {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+#service {
+  top: 100px;
+}
+
+@media (max-width: 992px) {
+  .hero__content {
+    position: relative;
+    left: unset;
+    right: unset;
+    transform: unset;
+    padding-block: 50px;
   }
-  a:hover {
-    color: #747bff;
+  h1 {
+    line-height: 40px;
   }
-  button {
-    background-color: #f9f9f9;
+}
+
+@media (max-width: 1400px) {
+  .car-background {
+    width: 50%;
   }
 }

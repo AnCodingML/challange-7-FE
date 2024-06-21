@@ -4,6 +4,8 @@ Initial React TS using Vite <a>https://vitejs.dev/guide/</a> using npm<br>
 <code>npm create vite@latest challange6 -- --template react-ts</code>
 <h2>STEP 2</h2>
 <code>npm run install <br> npm run dev</code>
+<h2>STEP 3: Install Bootstrap</h2>
+<code>npm install react-bootstrap bootstrap</code> and import css bootsrap to main.tsx
 
 <br><br><br><br>
 
