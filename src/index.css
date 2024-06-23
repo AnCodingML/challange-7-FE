@@ -12,14 +12,49 @@
 body {
   font-family: Helvetica, Arial, sans-serif!important;
 }
+ul {
+  padding-left: 1rem;
+}
 h1 {
   size: 36px;
   line-height: 54px;
   font-weight: 700;
 }
+h2 {
+  size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+}
+h3 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.accordion-header button {
+  border-radius: 10px;
+  background-color: transparent!important;
+  border: none!important;
+  box-shadow: none!important;
+}
+.bg-darkblue {
+  background-color: #0D28A6;
+}
 p {
   font-size: 14px;
   line-height: 20px;
+}
+.image-list {
+  list-style: none; /* Menghapus bullet point default */
+  padding: 0;
+  margin: 0;
+}
+
+.image-list li {
+  background-image: url('./assets/checklist.png');
+  background-repeat: no-repeat;
+  background-position: 0 50%; /* Menempatkan gambar di kiri tengah */
+  background-size: 20px 20px; /* Menyesuaikan ukuran gambar */
+  padding-left: 30px; /* Memberi jarak antara ikon dan teks */
 }
 
 .logo {
@@ -96,10 +131,90 @@ nav {
   z-index: 1;
 }
 
-
-
 #service {
   top: 100px;
+}
+.service-image {
+  width: 100%;
+  max-width: 400px;
+}
+
+.break-top {
+  margin-top: 100px;
+}
+.break-top__big {
+  margin-top: 150px;
+}
+
+.splide__arrow svg {
+  fill: none;
+  height: unset;
+  width: unset;
+}
+
+.splide__arrow {
+  -ms-flex-align: center;
+  align-items: center;
+  background: #5CB85F;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2em;
+  -ms-flex-pack: center;
+  justify-content: center;
+  opacity: 1;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  transform: translateY(25%);
+  width: 2em;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #5CB85F;
+  margin-top: 20px;
+}
+
+.splide__arrow:hover:not(:disabled) {
+  opacity: .5;
+  transition: all 0.3s ease-in-out;
+}
+.splide__arrow:hover:active {
+  background: #146c43;
+}
+
+.splide__arrow--next {
+  right: 50%;
+  transform: translateX(150%);
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+.splide__arrow--prev {
+  left: 50%;
+  transform: translateX(-150%);
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+.splide__arrow:disabled {
+  background: #ffffff;
+  color: black;
+  opacity: 1;
+  border: 1px solid #C4C4C4;
+  transition: all 0.3s ease-in-out;
+}
+.splide__slide {
+  background-color: #F1F3FF;
+}
+
+.profil {
+  object-fit: cover;
+}
+
+.btn__footer {
+  padding: 4px;
+  background: #0D28A6;
+  border: unset;
 }
 
 @media (max-width: 992px) {
@@ -112,6 +227,9 @@ nav {
   }
   h1 {
     line-height: 40px;
+  }
+  h2 {
+    line-height: 30px;
   }
 }
 
