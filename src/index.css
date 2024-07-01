@@ -30,6 +30,18 @@ h3 {
   font-weight: 700;
   line-height: 24px;
 }
+.custom-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  content: '>'; /* Ganti '/' dengan '>' */
+  color: #000; /* Atur warna separator */
+}
+.breadcrumb-item a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+}
+.breadcrumb-item{
+  font-size: 12px;
+}
 .accordion-header button {
   border-radius: 10px;
   background-color: transparent!important;
@@ -38,6 +50,23 @@ h3 {
 }
 .bg-darkblue {
   background-color: #0D28A6;
+}
+.btn-filter-cms.active {
+  opacity: 1;
+  transition: 0.3s;
+  background-color: #CFD4ED;
+  color: #0D28A6;
+}
+.btn-filter-cms.active:hover {
+  opacity: .5;
+}
+.btn-filter-cms{
+  opacity: 0.5;
+  background-color: #CFD4ED;
+  border: 1px solid #0D28A6;
+  color: #0D28A6;
+  transition: 0.3s;
+  font-weight: 600;
 }
 p {
   font-size: 14px;
@@ -227,6 +256,104 @@ nav {
     width: 100%;
     object-position: center;
  }
+
+ #navbar__left {
+  top: 0;
+  padding: 0;
+  height: -webkit-fill-available;
+  position: fixed;
+ }
+#navbar__top {
+  top: 0;
+  padding: 0;
+  height: 70px;
+}
+
+ #navbar__menu {
+  width: 70px;
+  height: 100vh;
+ }
+ 
+.fs__navbar {
+  font-size: 12px;
+}
+
+.navbar__list-menu{
+  padding-block: 10px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cms {
+  position: absolute;
+  top: 70px;
+  left: 70px;
+  background-color: #F4F5F7;
+  width: -webkit-fill-available;
+  min-height: -webkit-fill-available;
+  padding-top: 30px;
+  padding-inline: 25px;
+}
+.cms__login{
+  background: linear-gradient(rgba(4, 4, 102, 0.5), rgba(29, 29, 77, 0.5)),url("./assets/bg-login.png") no-repeat ;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+.cms__form-login {
+  background-color: white;
+  height: 100vh;
+  width: 600px;
+  margin-left: auto;
+  padding: 50px;
+  display: grid;
+  align-content: center;
+}
+.swal2-actions{
+  gap:10px
+}
+.swal2-actions button{
+  width: 110px;
+  border-radius: 3px!important;
+  font-weight: 600;
+  border: 2px solid #0D28A6!important;
+}
+.swal2-cancel {
+  background-color: transparent!important;
+  color: #0D28A6!important;
+}
+.swal2-confirm{
+  background-color: #0D28A6!important;
+}
+
+.cms form div {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.cms .form-check {
+  gap: 10px; 
+}
+.cms .form-check label {
+  align-content: center;
+}
+
+.cms form label {
+  width: 200px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #222222;
+}
+
+.cms form input, .cms form textarea {
+  border-radius: 3px!important;
+  border: 1px solid black!important
+}
+
+.cms__login .logo {
+  background-color: #CFD4ED;
+}
+
 @media (max-width: 992px) {
   .hero__content {
     position: relative;

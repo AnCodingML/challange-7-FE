@@ -8,10 +8,10 @@ export default function Car() {
    const [filters, setFilters] = useState({driverType:'', rentalTime:'', passengerCount:''});
    const [tempFilters, setTempFilters] = useState({driverType:'', rentalTime:'', passengerCount:''});
    const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+   const [hasError, setHasError] = useState(false);
 
    useEffect(() => {
       fetchCars(filters);
-      console.log("use fecth Filters applied");
     }, [filters]);
 
     useEffect(() => {
@@ -52,7 +52,7 @@ export default function Car() {
                <Col lg={6} className='ms-auto text-end overflow-hidden d-none d-lg-block pt-4'>
                   <Image src={ImageCar} alt="car" className='car'/>
                   <div className='car-background'></div>
-                  </Col>
+                </Col>
             </Container>
          </section>
     )
@@ -163,7 +163,6 @@ export default function Car() {
     );
 
 
-
     if (loading) {
       return (
          <>
@@ -199,7 +198,13 @@ export default function Car() {
                 {cars.map(car => (
                   <div key={car.id} className="card-car rounded-3 shadow-sm p-3 d-grid border">
                      <div>
-                        <Image className="car-img rounded-2" src={`http://localhost:5000/public${car.image}`} alt={car.manufacture}/>
+                        <Image className="car-img rounded-2" src={`http://localhost:5000/public${car.image}`} 
+                          onError={(e) => {
+                            if (!e.target.dataset.fallback) {
+                              e.target.dataset.fallback = 'true';
+                              e.target.src = `https://res.cloudinary.com/dny7zete3/image/upload/v1719396508/${car.image}.webp`;
+                            }
+                          }}/>
                         <p className="mb-2 mt-4 fw-semibold">{car.manufacture} - {car.model}</p>
                         <div className="mb-2"><b>Rp {car.rentPerDay} / hari</b></div>
                         <p className="description mb-2">{car.description}</p>

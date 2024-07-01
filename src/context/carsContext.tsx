@@ -1,7 +1,7 @@
 // CarContext.js
 
 import { createContext, useState,useContext  } from 'react';
-import axios from 'axios';
+import axios from '../lib/axios';
 
 // Create the context
 export const CarContext = createContext(null);
@@ -24,7 +24,7 @@ export default function CarProvider ({ children }) {
         setLoading(true);
         setError(null);
         try {
-            const response = await axios.get('http://localhost:5000/api/v1/cars', { params: filters });
+            const response = await axios.get('/cars', { params: filters });
             setCars(response.data.data);
         } catch (err) {
             setError(err);
