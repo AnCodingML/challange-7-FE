@@ -1,4 +1,19 @@
-<h1>Front End Challange 6</h1>
+# How to use
+1. npm run i
+2. npm run dev
+# Routing
+- Route [page](http://localhost:5173)
+- Route cms [login](http://localhost:5173/cms/admin-login)
+- Route cms [dashboard](http://localhost:5173/cms/dashboard)
+- Route cms [cars](http://localhost:5173/cms/dashboard/cars)
+<br><br>
+<h1> Admin login</h1>
+email: superadmin@mail.com <br>
+ps: 123
+
+<br><br>
+
+# Step Front End Challange 6
 <h2>STEP 1</h2>
 Initial React TS using Vite <a>https://vitejs.dev/guide/</a> using npm<br>
 <code>npm create vite@latest challange6 -- --template react-ts</code>
@@ -7,7 +22,7 @@ Initial React TS using Vite <a>https://vitejs.dev/guide/</a> using npm<br>
 <h2>STEP 3: Install Bootstrap</h2>
 <code>npm install react-bootstrap bootstrap</code> and import css bootsrap to main.tsx
 
-<br><br><br><br>
+<br><br>
 
 # React + TypeScript + Vite
 
