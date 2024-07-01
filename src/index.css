@@ -9,6 +9,14 @@
   /* -webkit-font-smoothing: antialiased; */
   /* -moz-osx-font-smoothing: grayscale; */
 }
+.img__profile {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+#navbar__profile {
+  cursor: pointer;
+}
 body {
   font-family: Helvetica, Arial, sans-serif!important;
 }
@@ -309,6 +317,11 @@ nav {
   display: grid;
   align-content: center;
 }
+
+.swal__custom-img {
+  object-fit: cover;
+}
+
 .swal2-actions{
   gap:10px
 }

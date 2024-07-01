@@ -72,7 +72,7 @@ export default function CarsCms() {
          </Breadcrumb>
          <div className='d-flex align-items-center'>
             <h1 className='fs-4 mb-0'>List Cars</h1>
-            <div className='ms-auto'><Link to='/cms/addCar' className='text-decoration-none'><Button className='d-flex bg-darkblue rounded-1 border-0'>+ <div className='ms-3'>Add New Car</div></Button></Link></div>
+            <div className='ms-auto'><Link to='/cms/dashboard/addCar' className='text-decoration-none'><Button className='d-flex bg-darkblue rounded-1 border-0'>+ <div className='ms-3'>Add New Car</div></Button></Link></div>
          </div>
          <div className='gap-2 d-flex mt-3'>
             <Button onClick={() => handleFilter('All')} className={`btn-small btn-filter-cms ${activeFilter === 'All' ? 'active' : ''}`}>All</Button>
@@ -131,7 +131,7 @@ export default function CarsCms() {
                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.25"  stroke-linecap="round"  stroke-linejoin="round"  className="icon icon-tabler icons-tabler-outline icon-tabler-trash"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 7l16 0" /><path d="M10 11l0 6" /><path d="M14 11l0 6" /><path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" /><path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" /></svg>
                            <p className='mb-0'>Delete</p>
                         </Button>
-                        <Button onClick={() => navigate(`/cms/editCar?id=${car.id}`)} size='lg' className="mt-4 col btn rounded-1 btn-success border-0 fw-semibold align-items-center flex-wrap d-flex justify-content-center gap-2">
+                        <Button onClick={() => navigate(`/cms/dashboard/editCar?id=${car.id}`)} size='lg' className="mt-4 col btn rounded-1 btn-success border-0 fw-semibold align-items-center flex-wrap d-flex justify-content-center gap-2">
                            <Image src={Edit} alt='edit'/><p className='mb-0'>Edit</p>
                         </Button>
                      </div>

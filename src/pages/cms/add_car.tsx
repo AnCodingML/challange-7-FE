@@ -234,7 +234,7 @@ const CarForm: React.FC = () => {
         </Form.Group>
         </div>
         <div className='d-flex gap-2'>
-          <Button onClick={() => navigate('/cms/cars')} className="mt-3 bg-white btn btn-filter-cms active rounded-1" style={{width: '100px'}}>
+          <Button onClick={() => navigate('/cms/dashboard/cars')} className="mt-3 bg-white btn btn-filter-cms active rounded-1" style={{width: '100px'}}>
             Cancel
           </Button>
           <Button type="submit" className="mt-3 bg-darkblue rounded-1" style={{width: '100px', border:'1px solid #0D28A6'}}>
