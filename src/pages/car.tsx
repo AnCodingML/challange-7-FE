@@ -2,6 +2,7 @@ import {Container, Image, Col, Spinner} from 'react-bootstrap';
 import ImageCar from '../assets/car.png'
 import { ChangeEvent, useEffect, useState } from 'react';
 import { useCars } from '../context/carsContext';
+import axios from '../lib/axios_img-car'
 
 export default function Car() {
    const { cars, fetchCars, loading, error } = useCars();
@@ -198,7 +199,7 @@ export default function Car() {
                 {cars.map(car => (
                   <div key={car.id} className="card-car rounded-3 shadow-sm p-3 d-grid border">
                      <div>
-                        <Image className="car-img rounded-2" src={`http://8.215.36.119:5000/public${car.image}`} 
+                        <Image className="car-img rounded-2" src={axios.defaults.baseURL  + car.image} 
                           onError={(e) => {
                             if (!e.target.dataset.fallback) {
                               e.target.dataset.fallback = 'true';
