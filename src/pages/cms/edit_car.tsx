@@ -4,6 +4,7 @@ import { Form, Button, Breadcrumb } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { useCars, Car } from '../../context/carsContext';
 import axios from '../../lib/axios';
+import axios_car from '../../lib/axios_img-car'
 import Swal from 'sweetalert2';
 
 const useQuery = () => {
@@ -168,7 +169,7 @@ const EditCar: React.FC = () => {
                   e.target.src = `https://res.cloudinary.com/dny7zete3/image/upload/v1719396508/${imageCar.image}.webp`;
                 } else if (e.target.dataset.fallback === 'true') {
                   e.target.dataset.fallback = 'false';
-                  e.target.src = `http://localhost:5000/public${imageCar.image}`;
+                  e.target.src = axios_car.defaults.baseURL  + imageCar.image;
                 }
               }}/>
             </div>

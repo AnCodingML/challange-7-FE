@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Edit from '../../assets/Edit.svg'
 import { UUID } from 'crypto';
 import axios from '../../lib/axios';
+import axios_car from '../../lib/axios_img-car'
 import Swal from 'sweetalert2'
 import AlertImgCar from '../../assets/img-BeepBeep.svg'
 import { Navigate, useOutletContext } from 'react-router-dom';
@@ -115,7 +116,7 @@ export default function CarsCms() {
             {cars.map(car => (
                   <div key={car.id} className="card-car rounded-3 shadow-sm p-3 d-grid border">
                      <div>
-                        <Image className="car-img rounded-2" src={axios.defaults.baseURL  + car.image}  
+                        <Image className="car-img rounded-2" src={axios_car.defaults.baseURL  + car.image}  
                           onError={(e) => {
                             if (!e.target.dataset.fallback) {
                               e.target.dataset.fallback = 'true';
