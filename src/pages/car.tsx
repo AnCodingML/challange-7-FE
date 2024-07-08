@@ -198,7 +198,7 @@ export default function Car() {
                 {cars.map(car => (
                   <div key={car.id} className="card-car rounded-3 shadow-sm p-3 d-grid border">
                      <div>
-                        <Image className="car-img rounded-2" src={`http://localhost:5000/public${car.image}`} 
+                        <Image className="car-img rounded-2" src={`http://8.215.36.119:5000/public${car.image}`} 
                           onError={(e) => {
                             if (!e.target.dataset.fallback) {
                               e.target.dataset.fallback = 'true';
