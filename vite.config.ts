@@ -7,5 +7,8 @@ export default defineConfig({
   server: {
     port: 3000, // Ganti dengan port yang kamu inginkan
     host: '0.0.0.0', // Mengikat pada semua antarmuka jaringan
+    watch: {
+      usePolling: false, // Disable polling to avoid unnecessary file watching
+    },
   },
 })
