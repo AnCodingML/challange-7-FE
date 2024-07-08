@@ -2,10 +2,11 @@
 1. npm run i
 2. npm run dev
 # Routing
-- Route [page](http://localhost:5173)
-- Route cms [login](http://localhost:5173/cms/admin-login)
-- Route cms [dashboard](http://localhost:5173/cms/dashboard)
-- Route cms [cars](http://localhost:5173/cms/dashboard/cars)
+- localhost: http://localhost:3000 ; existing:  http://8.215.36.119:3000/
+- Route [page](http://localhost:3000)
+- Route cms [login](http://localhost:3000/cms/admin-login)
+- Route cms [dashboard](http://localhost:3000/cms/dashboard)
+- Route cms [cars](http://localhost:3000/cms/dashboard/cars)
 <br><br>
 <h1> Admin login</h1>
 email: superadmin@mail.com <br>
