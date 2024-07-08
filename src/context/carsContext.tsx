@@ -33,7 +33,8 @@ export default function CarProvider ({ children }) {
         setLoading(true);
         setError(null);
         const bearer = localStorage.getItem('users');
-        if (bearer) {
+        console.log(location.pathname)
+        if (bearer && location.pathname === '/cms/dashboard/cars') {
             const user = JSON.parse(bearer);
             setUser(user);
         

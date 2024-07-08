@@ -76,7 +76,7 @@ const CarForm: React.FC = () => {
           text: "Data berhasil ditambahkan",
           icon: "success"
         }).then(() => {
-          navigate('/cms/cars');
+          navigate('/cms/dashboard/cars');
         });
       });
       

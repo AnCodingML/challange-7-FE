@@ -85,7 +85,7 @@ const EditCar: React.FC = () => {
           text: "Data berhasil diupdate",
           icon: "success"
         }).then(() => {
-          navigate('/cms/cars');
+          navigate('/cms/dashboard/cars');
         });
       });
       
