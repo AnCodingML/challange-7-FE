@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'vite-app',
+      name: 'fe challange 8',
       script: 'node_modules/vite/bin/vite.js',
       args: 'serve',
       watch: false,
