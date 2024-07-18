@@ -2,7 +2,7 @@
 1. npm run i
 2. npm run dev
 # Routing
-- localhost: http://localhost:3000 ; existing:  http://8.215.36.119:3000/
+- localhost: http://localhost:3000 ; existing:  http://54.179.193.110:3000/
 - Route [page](http://localhost:3000)
 - Route cms [login](http://localhost:3000/cms/admin-login)
 - Route cms [dashboard](http://localhost:3000/cms/dashboard)
